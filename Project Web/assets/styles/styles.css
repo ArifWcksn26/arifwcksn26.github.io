@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: inline;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 30px;
+    background: url('https://images.unsplash.com/photo-1610201417828-29dd1173d62f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center; /* Ganti dengan URL gambar Anda */
+    background-size: cover; 
+    text-align: center;
+    color: white; 
+}
+h1 {
+    font-size: 3em; 
+    font-weight: bold; 
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.tagline {
+    font-style: italic; 
+    font-size: 1.2em; 
+}
+
+nav {
+    padding: 15px;
+    position: sticky; 
+    top: 0; 
+    background: rgb(218, 41, 28); 
+    z-index: 1000; 
+    justify-content: space-between;
+    display: flex;
+}
+
+#nav-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; 
+    display: flex;
+}
+
+#nav-menu li {
+    margin-left: 0.8em;
+    margin-right: 30px; /* Jarak antar item navigasi */
+    position: relative; /* Tambahkan posisi relatif untuk dropdown */
+}
+
+nav a {
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    color: white; /* Warna teks */
+    font-size: 1.1em; /* Ukuran font untuk tautan */
+    font-family: 'Arial', sans-serif; /* Ganti dengan font yang diinginkan */
+    transition: color 0.3s, transform 0.3s; /* Transisi saat hover */
+    font-weight: 600; /* Menebalkan font */
+    letter-spacing: 1px; /* Spasi antar huruf */
+    text-transform: uppercase; /* Mengubah semua huruf menjadi kapital */
+}
+
+nav a::after {
+    content: ''; /* Membuat elemen konten kosong */
+    display: block; /* Mengatur menjadi block */
+    height: 2px; /* Tinggi garis bawah */
+    width: 100%; /* Lebar penuh */
+    background: #000000; /* Warna garis bawah */
+    position: absolute; /* Mengatur posisi */
+    left: 0; /* Posisi kiri */
+    bottom: -5px; /* Jarak dari bawah */
+    transform: scaleX(0); /* Mengatur skala awal menjadi 0 */
+    transition: transform 0.3s ease; /* Transisi saat hover */
+}
+
+nav li:hover a::after,
+nav li a:focus::after {
+    transform: scaleX(1); /* Mengatur skala menjadi 1 saat hover atau fokus */
+}
+
+nav li:hover a {
+    color: #000000; /* Warna saat hover */
+    transform: translateY(-2px); /* Efek angkat saat hover */
+}
+
+#searchContainer {
+    position: relative; /* Posisi relatif untuk memposisikan hasil pencarian */
+    display: flex; /* Menjaga kolom pencarian dan hasil dalam satu baris */
+    flex-direction: column; /* Mengatur agar hasil pencarian berada di bawah input */
+    align-items: flex-end; /* Mengatur hasil pencarian ke kanan */
+}
+
+#searchInput {
+    padding: 5px; /* Padding dalam input */
+    margin-right: 5px; /* Jarak antara input dan tombol */
+    border: 1px solid #ccc; /* Garis batas */
+    border-radius: 4px; /* Sudut melengkung */
+    width: 200px; /* Lebar input */
+}
+
+#searchButton {
+    padding: 5px 10px; /* Padding dalam tombol */
+    border: none; /* Menghilangkan garis batas */
+    border-radius: 4px; /* Sudut melengkung */
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    cursor: pointer; /* Pointer saat hover */
+}
+
+#searchButton:hover {
+    background-color: #0056b3; /* Warna saat hover pada tombol */
+}
+
+/* Styling hasil pencarian */
+#searchResults {
+    display: none; /* Sembunyikan hasil pencarian secara default */
+    background-color: #f9f9f9;
+    min-width: 200px; /* Lebar minimum sama dengan input */
+    max-width: 200px; /* Maksimal lebar agar tidak terlalu lebar */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 5px; /* Jarak antara input dan hasil pencarian */
+    position: absolute; /* Memastikan hasil pencarian muncul di bawah kolom pencarian */
+    right: 0; /* Menempatkan hasil pencarian di sisi kanan */
+}
+
+#searchResults a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Menampilkan setiap hasil dalam blok */
+}
+
+#searchResults a:hover {
+    background-color: #f1f1f1; /* Warna latar belakang saat hover */
+}
+/* Gaya untuk konten utama */
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Gaya untuk konten artikel */
+#content {
+    flex: 4;
+ 
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.club-info {
+    margin-bottom: 20px; /* Jarak antara card klub dan profil penulis */
+}
+
+.card h2 {
+    margin-top: 0; /* Menghilangkan margin atas untuk h2 */
+    margin-bottom: 15px; /* Jarak bawah untuk heading */
+}
+
+.card p {
+    margin-bottom: 10px; /* Jarak bawah untuk paragraf */
+}
+
+.container {
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    margin-bottom: 20px; /* Jarak bawah */
+}
+.logo {
+    width: 200px; /* Ukuran gambar */
+    height: auto; /* Mempertahankan rasio aspek */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+.text {
+    margin: 0; /* Menghapus margin */
+}
+
+.alex-image {
+    width: 200px; /* Ukuran gambar Sir Alex Ferguson */
+    height: auto; /* Mempertahankan rasio aspek */
+    margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+   
+    object-fit: cover;
+    object-position: center;
+  }
+
+/* Gaya untuk aside */
+aside {
+    flex: 1.2; /* Lebar 1 bagian dari 4 */
+}
+
+.player-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom */
+    gap: 20px; /* Jarak antar elemen */
+    margin: 20px 0;
+}
+
+.player {
+    text-align: center; /* Rata tengah teks di bawah gambar */
+    border: 1px solid #ccc; /* Batas di sekitar setiap pemain */
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff; /* Latar belakang putih untuk pemain */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transisi untuk efek */
+}
+
+.player:hover {
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat hover */
+}
+
+.player-photo {
+    width: 100%; /* Memastikan gambar mengambil lebar penuh */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 8px; /* Sudut melengkung untuk gambar */
+    margin-bottom: 10px; /* Jarak bawah gambar */
+}
+
+.profile-header {
+    padding: 20px; 
+    border-radius: 8px; 
+    text-align: center; 
+}
+
+.profile-figure {
+    margin: 0; 
+}
+
+.profile-image {
+    width: 170px; 
+    height: 170px; 
+    border-radius: 50%; 
+    display: block; 
+    margin: 0 auto; 
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.profile-name {
+    font-weight: bold; 
+    font-size: 1.5em; 
+    margin: 10px 0; /* Jarak atas dan bawah */
+}
+
+.profile-info {
+    text-align: left; 
+    font-size: 0.9em; 
+    width: 80%; 
+    margin: 20px auto; 
+    
+}
+
+.profile-info p {
+    margin: 10px 0; /* Jarak antar paragraf */
+}
+
+.table-club {
+    width: 50%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.table-club th, .table-club td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+.table-club th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+.table-club tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.table-club tr:hover {
+    background-color: #f1f1f1;
+}
+.flag {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Gaya untuk tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #f4f4f4;
+}
+
+/* Gaya untuk footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    header {
+        text-align: center; /* Rata tengah untuk header */
+    }
+
+    .jumbotron {
+        padding: 20px; /* Mengurangi padding pada jumbotron di mobile */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Mengurangi ukuran font judul di mobile */
+    }
+
+    nav {
+        flex-direction: column; /* Mengubah navigasi menjadi kolom */
+        align-items: center; /* Rata tengah item navigasi */
+    }
+
+    nav ul {
+        flex-direction: column; /* Mengatur daftar menjadi kolom */
+        padding: 0; /* Menghilangkan padding */
+        
+    }
+
+    nav li {
+        margin: 10px 0; /* Jarak antar item menu */
+    }
+
+    #searchInput {
+        width: 80%; /* Lebar input pencarian di mobile */
+        margin: 10px 0; /* Jarak atas dan bawah */
+        
+    }
+
+    #searchButton {
+        width: 80%; /* Lebar tombol pencarian di mobile */
+        margin: 10px 0; /* Jarak atas dan bawah */
+        justify-content: center; /* Rata tengah item navigasi */
+    }
+
+    main {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+    }
+
+    #content {
+        flex: none; /* Menghilangkan fleksibilitas */
+    }
+
+    aside {
+        flex: none; /* Menghilangkan fleksibilitas pada aside */
+        margin-top: 20px; /* Jarak atas untuk aside */
+    }
+
+    .player-photos {
+        grid-template-columns: 1fr; /* Satu kolom untuk tampilan mobile */
+    }
+
+    .table-club {
+        width: 100%; /* Lebar tabel 100% pada mobile */
+    }
+
+    .profile-info {
+        width: 90%; /* Lebar profil penulis */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Mengurangi ukuran font judul lebih jauh di mobile kecil */
+    }
+
+    .tagline {
+        font-size: 1em; /* Mengurangi ukuran font tagline */
+    }
+
+    #searchInput, #searchButton {
+        font-size: 14px; /* Ukuran font untuk input dan tombol lebih kecil */
+        padding: 6px; /* Padding lebih kecil */
+    }
+}
+
