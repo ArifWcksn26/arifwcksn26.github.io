@@ -1048,16 +1048,8 @@ span {
         gap: 2rem;
     }
 
-    .services-container {
-        flex-direction: column;
-        gap: 1.5rem; /* bisa diubah sesuai kebutuhan */
-        align-items: center; /* supaya box bisa lebih kecil dan rapi */
-    }
-
     .services-container .services-box {
-        flex: 1 1 90%; /* tidak paksa 100%, bisa 80%-90% */
-        max-width: 500px; /* optional, biar tidak terlalu lebar */
-        text-align: center; /* optional, supaya isi tetap rapi */
+        flex: 1 1 100%;
     }
 
     .projects-container {
