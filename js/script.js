@@ -76,7 +76,41 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal(
+    '.home-img img, .services-container, .services-desc, .projects-container, .projects>p, .project-card, .testimonial-wrapper, .contact form, .contact-container',
+    { origin: 'bottom'}
+);
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
+
+const text = "Arif Wicaksono";
+const target = document.querySelector(".typing-name");
+
+let index = 0;
+let isDeleting = false;
+let speed = 130; // kecepatan ketik
+
+function typeEffect() {
+    if (!isDeleting) {
+        target.textContent = text.substring(0, index + 1);
+        index++;
+
+        if (index === text.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1500); // jeda setelah selesai mengetik
+            return;
+        }
+    } else {
+        target.textContent = text.substring(0, index - 1);
+        index--;
+
+        if (index === 0) {
+            isDeleting = false;
+        }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 80 : speed); // kecepatan hapus lebih cepat
+}
+
+typeEffect();
 
