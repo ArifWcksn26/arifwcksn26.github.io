@@ -702,228 +702,71 @@ span {
     color: var(--main-color);
 }
 
-.testimonial-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 5rem 1rem;
+/* Tools Container */
+.tools-container {
+    padding: 7rem 9% 4rem;
 }
 
-.testimonial-container .testimonial-wrapper {
-    position: relative;
-    max-width: 90rem;
-    width: 100%;
-    padding: 5rem;
-}
-
-.testimonial-wrapper .testimonial-box {
-    padding: 1rem;
-    border-radius: 2rem;
-    overflow: hidden;
-}
-
-.testimonial-content .testimonial-slide {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background: var(--bg-color);
-    border-radius: 2rem;
-    box-shadow: 0 .1rem .5rem var(--shadow-color);
-    padding: 3rem 5rem;
-    border-top: .8rem solid var(--main-color);
-    border-bottom: .8rem solid var(--main-color);
-}
-
-.testimonial-slide img {
-    width: 14rem;
-    height: 14rem;
-    object-fit: cover;
-    border-radius: 50%;
-    border: .5rem solid var(--bg-color);
-    outline: .5rem solid var(--main-color);
-}
-
-.testimonial-slide h3 {
-    font-size: 2.5rem;
-    margin: 2rem 0;
-}
-
-.testimonial-slide p {
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-.testimonial-box .swiper-button-next,
-.testimonial-box .swiper-button-prev {
-    color: var(--main-color);
-}
-
-.testimonial-box .swiper-button-next {
-    right: 0;
-}
-
-.testimonial-box .swiper-button-prev {
-    left: 0;
-}
-
-.testimonial-box .swiper-pagination-bullet {
-    background: rgba(0, 0, 0, .8);
-}
-
-.testimonial-box .swiper-pagination-bullet-active {
-    background: var(--main-color);
-}
-
-/* Wrapper 2 kolom */
-.contact-container {
-    max-width: 100rem;
-    margin: 0 auto;
-    margin-top: 3rem;
-    display: flex;
-    gap: 4rem;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-/* LEFT SIDE */
-.contact-left {
-    flex: 1;
-    min-width: 320px;
-}
-
-.contact-left h3 {
-    font-size: 2.4rem;
-    margin-bottom: 1.5rem;
-}
-
-.contact-left p {
-    font-size: 1.6rem;
-    opacity: 0.85;
-    line-height: 1.7;
+.tools-container h2 {
     margin-bottom: 2rem;
 }
 
-/* Email + phone */
-.contact-info-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+/* Grid Styling */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+/* Card Styling */
+.tool-box {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tool-box:hover {
+    transform: translateY(-7px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.tool-box img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
 }
 
-.contact-info-item i {
-    font-size: 2.2rem;
-    color: var(--main-color);
+.tool-box h3 {
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
 }
 
-/* Social icons */
-.contact-socials {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-}
-
-.contact-socials a i {
-    font-size: 2.3rem;
-    padding: .8rem;
-    border-radius: 50%;
-    border: 1px solid var(--main-color);
-    transition: .3s;
-}
-
-.contact-socials a i:hover {
-    background: var(--main-color);
-    color: #fff;
-}
-
-/* RIGHT SIDE FORM */
-.contact-right {
-    flex: 1;
-    min-width: 350px;
-}
-
-.contact-right form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.contact-right input,
-.contact-right textarea {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    border-radius: .8rem;
-    background: var(--bg-color);
-    color: var(--text-color);
-    box-shadow: 0 .1rem .5rem var(--shadow-color);
-}
-
-/* Submit Glow Button */
-.contact-submit {
-    margin-top: 1rem;
-    padding: 1.4rem;
-    font-size: 1.7rem;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    background: var(--main-color);
-    color: #fff;
-    
-    transition: .3s;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 7%;
-    background: var(--main-color);
-}
-
-.footer-text p {
-    font-size: 1.6rem;
-    color: var(--white-color);
-}
-
-.footer-iconTop a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: var(--white-color);
-    border-radius: .8rem;
-    border: .2rem solid var(--main-color);
-    outline: .2rem solid transparent;
-    transition: .5s ease;
-}
-
-.footer-iconTop a:hover {
-    outline-color: var(--white-color);
-}
-
-.footer-iconTop a i {
-    font-size: 2.4rem;
-    color: #333;
+.tool-box p {
+    font-size: .95rem;
+    opacity: .8;
+    line-height: 1.4;
 }
 
 /* =========================================
-   RESPONSIVE UNTUK ≤ 1080px (TANPA HAMBURGER)
-   ========================================= */
+   RESPONSIVE ≤1080px — SUDAH FIX "TOOLS"
+========================================= */
 @media (max-width: 1080px) {
 
     html {
         font-size: 60%;
     }
 
+    /* Header & Navbar */
     .header {
         padding: 1.5rem 6%;
     }
 
-    /* Navbar tetap horizontal */
     .navbar {
         display: flex;
         gap: 2rem;
@@ -934,11 +777,11 @@ span {
         margin: 0 1rem;
     }
 
-    /* ICON HAMBURGER TETAP DISABLED */
     #menu-icon {
         display: none;
     }
 
+    /* Home */
     .home {
         padding: 10rem 6% 4rem;
         gap: 4rem;
@@ -964,7 +807,7 @@ span {
     /* About */
     .about {
         gap: 4rem;
-        padding: 4rem 4rem;
+        padding: 4rem 6%;
     }
 
     .about-img .img-box {
@@ -982,6 +825,7 @@ span {
 
     .about-content p {
         font-size: 1.6rem;
+        line-height: 1.6;
     }
 
     /* Services */
@@ -993,32 +837,30 @@ span {
         padding: 2.5rem;
     }
 
-    /* Projects → Jadi 2 kolom */
+    /* Tools / Skills (pengganti testimonial) */
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .tool-box {
+        padding: 2rem;
+    }
+
+    .tool-box h3 {
+        font-size: 1.6rem;
+    }
+
+    /* Projects → 2 kolom */
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.5rem;
     }
 
-    /* Tech Stack */
-    .tech-stack {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* Testimonials */
-    .testimonial-container .testimonial-wrapper {
-        padding: 2.5rem;
-    }
-
-    .testimonial-slide {
-        padding: 2.5rem 2rem;
-    }
-
     /* Contact */
     .contact-container {
         gap: 3rem;
-        padding: 3rem 4rem;
+        padding: 3rem 6%;
     }
 
     .contact-right input,
@@ -1034,12 +876,10 @@ span {
 
     /* Footer */
     .footer {
-        padding: 2rem 3rem;
+        padding: 2rem 6%;
         gap: 1rem;
     }
 }
-
-
 
 /* RESPONSIVE MOBILE: max-width 768px */
 @media (max-width: 768px) {
@@ -1199,12 +1039,26 @@ span {
         align-items: center;
     }
 
-    .testimonial-container .testimonial-wrapper {
-        padding: 2rem;
+    .tools-container {
+        padding: 6rem 7% 3.5rem;
     }
 
-    .testimonial-slide {
-        padding: 2rem 2rem;
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
+
+    .tool-box {
+        padding: 1.8rem;
+    }
+
+    .tool-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .tool-box img {
+        width: 60px;
+        height: 60px;
     }
 
     .contact-container {
@@ -1337,13 +1191,32 @@ span {
         gap: 0.4rem;
     }
 
-    /* TESTIMONIAL */
-    .testimonial-container .testimonial-wrapper {
-        padding: 1.5rem;
+    .tools-container {
+        padding: 4rem 1.3rem;
     }
 
-    .testimonial-slide {
-        padding: 1.5rem;
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.2rem;
+    }
+
+    .tool-box {
+        padding: 1.5rem 1rem;
+        border-radius: .8rem;
+    }
+
+    .tool-box img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tool-box h3 {
+        font-size: 1.05rem;
+    }
+
+    .tool-box p {
+        font-size: .75rem;
+        line-height: 1.3;
     }
 
     /* CONTACT */

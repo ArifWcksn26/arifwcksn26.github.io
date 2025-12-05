@@ -77,7 +77,7 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal(
-    '.home-img img, .services-container, .services-desc, .projects-container, .projects>p, .project-card, .testimonial-wrapper, .contact form, .contact-container',
+    '.home-img img, .services-container, .services-desc, .projects-container, .projects>p, .project-card, .testimonial-wrapper, .contact form, .contact-container, .tools-grid',
     { origin: 'bottom'}
 );
 ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
