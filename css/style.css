@@ -1076,16 +1076,19 @@ span {
         flex-direction: column;
         gap: 2rem;
         padding: 2rem 2rem;
-        align-items: center; /* Center isi container */
+        align-items: flex-start; /* Geser ke kiri */
+    }
+
+    .contact-right {
+        width: 100%; /* Full lebar container */
     }
 
     .contact-right form {
-        width: 100%;
-        max-width: 500px; /* Batasi lebar form */
+        width: 100%; /* Form ikut full lebar */
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
-        align-items: center; /* Center tombol submit */
+        align-items: flex-start; /* Tombol & input ke kiri */
     }
 
     .contact-right input,
@@ -1098,7 +1101,7 @@ span {
     .contact-submit {
         font-size: 1.5rem;
         padding: 1.2rem 2rem;
-        align-self: center; /* Tombol di tengah */
+        align-self: flex-start; /* Tombol ke kiri */
     }
 
     .footer {
@@ -1247,7 +1250,7 @@ span {
     }
 
     .contact-right form {
-        max-width: 100%; /* Form mengikuti lebar container */
+        width: 100%; 
     }
 
     .contact-right input,
@@ -1259,6 +1262,7 @@ span {
     .contact-submit {
         font-size: 1.4rem;
         padding: 1rem 2rem;
+        align-self: flex-start;
     }
 
     /* FOOTER */
