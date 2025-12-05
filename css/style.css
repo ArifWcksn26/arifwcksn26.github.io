@@ -1047,13 +1047,15 @@ span {
         align-items: center;
     }
 
-    .testimonial-container .testimonial-wrapper {
-        padding: 2rem;
+    /* Tools Container Mobile */
+    .tools-container .tools-grid {
+        padding: 2rem 0; /* atau sesuai kebutuhan */
     }
 
-    .testimonial-slide {
-        padding: 2rem 2rem;
+    .tool-box {
+        padding: 1.8rem 1rem; /* sesuai responsive sebelumnya */
     }
+
 
     .contact-container {
         flex-direction: column;
