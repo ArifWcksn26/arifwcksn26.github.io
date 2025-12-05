@@ -115,7 +115,24 @@ function typeEffect() {
 
 typeEffect();
 
+// Pesan konsol keren
 console.log("%cPortofolio Arif Wicaksono © 2025", "color: #faa41a; font-size: 16px;");
+
+// Disable klik kanan
 document.addEventListener("contextmenu", e => e.preventDefault());
 
+// Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+document.addEventListener("keydown", function(e) {
+    // F12
+    if (e.key === "F12") e.preventDefault();
+
+    // Ctrl+Shift+I / J
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) e.preventDefault();
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key === "u") e.preventDefault();
+
+    // Ctrl+Shift+C (Inspect Element)
+    if (e.ctrlKey && e.shiftKey && e.key === "C") e.preventDefault();
+});
 
