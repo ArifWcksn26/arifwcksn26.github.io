@@ -115,3 +115,7 @@ function typeEffect() {
 
 typeEffect();
 
+console.log("%cPortofolio Arif Wicaksono © 2025", "color: #faa41a; font-size: 16px;");
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+
