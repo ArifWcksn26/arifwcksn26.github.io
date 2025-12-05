@@ -80,7 +80,7 @@ ScrollReveal().reveal(
     '.home-img img, .services-container, .services-desc, .projects-container, .projects>p, .project-card, .testimonial-wrapper, .contact form, .contact-container, .tools-grid',
     { origin: 'bottom'}
 );
-ScrollReveal().reveal('.home-content h1, .about-img img', { origin: 'left' });
+ScrollReveal().reveal('.home-content h1, .about-img img, .img-box', { origin: 'left' });
 ScrollReveal().reveal('.home-content h3, .home-content p, .about-content', { origin: 'right' });
 
 
