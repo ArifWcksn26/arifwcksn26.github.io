@@ -702,7 +702,6 @@ span {
     color: var(--main-color);
 }
 
-/* Tools Container */
 .tools-container {
     padding: 7rem 9% 4rem;
 }
@@ -1047,15 +1046,31 @@ span {
         align-items: center;
     }
 
-    /* Tools Container Mobile */
-    .tools-container .tools-grid {
-        padding: 2rem 0; /* atau sesuai kebutuhan */
+    .tools-container {
+        padding: 5rem 5% 3rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+        gap: 1.5rem;
     }
 
     .tool-box {
-        padding: 1.8rem 1rem; /* sesuai responsive sebelumnya */
+        padding: 1.8rem;
     }
 
+    .tool-box img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tool-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .tool-box p {
+        font-size: 1rem;
+    }
 
     .contact-container {
         flex-direction: column;
@@ -1187,13 +1202,31 @@ span {
         gap: 0.4rem;
     }
 
-    /* TESTIMONIAL */
-    .testimonial-container .testimonial-wrapper {
-        padding: 1.5rem;
+    .tools-container {
+        padding: 4rem 3%;
     }
 
-    .testimonial-slide {
-        padding: 1.5rem;
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr); /* tetap 2 kolom */
+        gap: 1rem;
+    }
+
+    .tool-box {
+        padding: 1.5rem 1rem;
+        border-radius: .8rem;
+    }
+
+    .tool-box img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tool-box h3 {
+        font-size: 1.1rem;
+    }
+
+    .tool-box p {
+        font-size: .85rem;
     }
 
     /* CONTACT */
