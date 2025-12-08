@@ -1000,12 +1000,31 @@ span {
     }
 
     .about-img {
-        display: none;
+        display: flex !important;
+        justify-content: center;
+        flex-basis: 100%;
+        margin-top: 1.5rem;
     }
 
     .about-img .img-box {
-        transform: rotate(0deg) translateX(0);
-        width: 250px;
+        width: 200px;            /* ukuran lebih kecil untuk hp */
+        transform: none !important; /* hilangkan rotasi & geser */
+        padding: 6px;
+        border-radius: 15px;
+        background: #fff;
+        border: 2px solid #fff;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .about-img .img-box:hover {
+        transform: none !important; /* hilangkan efek hover */
+    }
+
+    .about-img img {
+        width: 100%;
+        aspect-ratio: 1 / 1;     /* BIKIN PERSEGI */
+        object-fit: cover;       /* biar crop rapi */
+        border-radius: 10px;
     }
 
     .about-content {
