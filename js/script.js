@@ -136,3 +136,12 @@ document.addEventListener("keydown", function(e) {
     if (e.ctrlKey && e.shiftKey && e.key === "C") e.preventDefault();
 });
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("reveal");
+    }
+  });
+});
+
+observer.observe(document.querySelector('.about-img .img-box'));

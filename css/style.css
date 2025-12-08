@@ -1008,17 +1008,30 @@ span {
 
     .about-img .img-box {
         width: 200px;            /* ukuran lebih kecil untuk hp */
-        transform: none !important; /* hilangkan rotasi & geser */
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        transition: opacity .5s ease, transform .6s ease;
         padding: 6px;
         border-radius: 15px;
         background: #fff;
-        border: 2px solid #fff;
+        border: 1px solid rgba(255, 255, 255, 0.4);
         box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        
     }
 
     .about-img .img-box:hover {
         transform: none !important; /* hilangkan efek hover */
     }
+
+    .about-img .img-box.reveal {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .about-img .img-box:active {
+        transform: scale(0.97);
+    }
+
 
     .about-img img {
         width: 100%;
